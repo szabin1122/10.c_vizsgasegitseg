@@ -1,0 +1,14 @@
+Felhasznákó // Jelszó:
+enable conf t
+username Cisco password Cisco
+
+Titkosítás:
+enable secret // password Titok
+
+Virtulis vonalak:
+line vty 0 15
+	password // secret Titok
+	login 
+	line con 0
+		password Titok
+		login
