@@ -28,6 +28,102 @@
     <p><a href="dhcp.png">dhcp.png</a></p>
     <p><a href="dhcp 2.png">dhcp2.png</a></p>
     <p><a href="HALOZAT.txt">Hálózati titkosítás CLI parancsok</a></p>
+    <br>
+    <h2>CLI-parancsok</h2>
+    <br>
+    <p>Switch:
+ip cim switchnek
+enable
+conf t
+int vlan1
+ip add A.B.C.D M.A.S.K
+no sh
+exit
+ip default-gateway A.B.C.D
+
+
+Home-ruter:
+internet setup:
+dhcp -> static ip
+Beállítod a megadott IP-t, MASK-ot,Default-Gateway-t;DNS-t
+Network Setup:
+IP-t beállítani
+Start IP
+Max user number
+DNS-t beállítani
+SAVE
+Wireless settings:
+SSDI átnevezése mind a 3 interface-n
+SAVE
+Wireless security:
+WPA2-Personal mind a 3 interface-n
+Passpharase: jelszó megadása
+SAVE
+w
+Laptop/Tablet/Telefon csatlakoztatás Wi-Fi-hez:
+laptop - config fül - wireless 0
+SSID átírás
+WPA2-PSK jelszó megadása
+
+
+Virtuális vonal:
+enable
+conf t
+line vty 0 15
+password xxxxxxx
+login
+
+
+Privilegizált jelszó:
+enable
+conf t
+enable password xxxxxxx
+
+
+Console jelszó:
+enable
+conf t
+line con 0
+password xxxxxxx
+login
+
+
+Banner:
+enable
+conf t
+banner motd "xxxxxxx"
+
+
+Felhasználónév és jelszó:
+enable
+conf t
+username xxxxxxx password/secret xxxxxxx
+(vagy password vagy secret)
+
+
+DHCP létrehozás forgalomirányítón:
+enable
+conf t
+(Kizárás)ip dhcp excluded-address A.B.C.D(-tól) A.B.C.D(-ig)
+ip dhcp pool NÉV
+network A.B.C.D M.A.S.K
+default-router A.B.C.D
+dns-server A.B.C.D
+
+
+RIP forgalomirányítás:
+router config felületén RIP
+hálózatok amiket ismer az eszköz
+2-es verzió esetén CLI: v 2
+
+
+OSPF forgalomirányítás:
+enable
+conf t
+router ospf XX
+network A.B.C.D revM.A.S.K area XX
+(255.255.255.0 -> revMASK 0.0.0.255 ; 255.255.255.252 -> revMASK 0.0.0.3)
+    </p>
   <footer>
     <table>
         <tr>
