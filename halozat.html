@@ -31,99 +31,99 @@
     <br>
     <h2>CLI-parancsok</h2>
     <br>
-    <p>Switch:
-ip cim switchnek
-enable
-conf t
-int vlan1
-ip add A.B.C.D M.A.S.K
-no sh
-exit
-ip default-gateway A.B.C.D
-
-
-Home-ruter:
-internet setup:
-dhcp -> static ip
-Beállítod a megadott IP-t, MASK-ot,Default-Gateway-t;DNS-t
-Network Setup:
-IP-t beállítani
-Start IP
-Max user number
-DNS-t beállítani
-SAVE
-Wireless settings:
-SSDI átnevezése mind a 3 interface-n
-SAVE
-Wireless security:
-WPA2-Personal mind a 3 interface-n
-Passpharase: jelszó megadása
-SAVE
-w
-Laptop/Tablet/Telefon csatlakoztatás Wi-Fi-hez:
-laptop - config fül - wireless 0
-SSID átírás
-WPA2-PSK jelszó megadása
-
-
-Virtuális vonal:
-enable
-conf t
-line vty 0 15
-password xxxxxxx
-login
-
-
-Privilegizált jelszó:
-enable
-conf t
-enable password xxxxxxx
-
-
-Console jelszó:
-enable
-conf t
-line con 0
-password xxxxxxx
-login
-
-
-Banner:
-enable
-conf t
-banner motd "xxxxxxx"
-
-
-Felhasználónév és jelszó:
-enable
-conf t
-username xxxxxxx password/secret xxxxxxx
-(vagy password vagy secret)
-
-
-DHCP létrehozás forgalomirányítón:
-enable
-conf t
-(Kizárás)ip dhcp excluded-address A.B.C.D(-tól) A.B.C.D(-ig)
-ip dhcp pool NÉV
-network A.B.C.D M.A.S.K
-default-router A.B.C.D
-dns-server A.B.C.D
-
-
-RIP forgalomirányítás:
-router config felületén RIP
-hálózatok amiket ismer az eszköz
-2-es verzió esetén CLI: v 2
-
-
-OSPF forgalomirányítás:
-enable
-conf t
-router ospf XX
-network A.B.C.D revM.A.S.K area XX
-(255.255.255.0 -> revMASK 0.0.0.255 ; 255.255.255.252 -> revMASK 0.0.0.3)
-    </p>
+    <p>Switch:</p>
+<p>ip cim switchnek</p>
+<p>enable</p>
+<p>conf t</p>
+<p>int vlan1</p>
+<p>ip add A.B.C.D M.A.S.K</p>
+<p>no sh</p>
+<p>exit</p>
+<p>ip default-gateway A.B.C.D</p>
+<br>
+<br>
+<p>Home-ruter:</p>
+<p>internet setup:</p>
+<p>dhcp -> static ip</p>
+<p>Beállítod a megadott IP-t, MASK-ot,Default-Gateway-t;DNS-t</p>
+<p>Network Setup:</p>
+<p>IP-t beállítani</p>
+<p>Start IP</p>
+<p>Max user number</p>
+<p>DNS-t beállítani</p>
+<p>SAVE</p>
+<p>Wireless settings:</p>
+<p>SSDI átnevezése mind a 3 interface-n</p>
+<p>SAVE</p>
+<p>Wireless security:</p>
+<p>WPA2-Personal mind a 3 interface-n</p>
+<p>Passpharase: jelszó megadása</p>
+<p>SAVE</p>
+<p>w</p>
+<p>Laptop/Tablet/Telefon csatlakoztatás Wi-Fi-hez:</p>
+<p>laptop - config fül - wireless 0</p>
+<p>SSID átírás</p>
+<p>WPA2-PSK jelszó megadása</p>
+<br>
+<br>
+<p>Virtuális vonal:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>line vty 0 15</p>
+<p>password xxxxxxx</p>
+<p>login</p>
+<br>
+<br>
+<p>Privilegizált jelszó:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>enable password xxxxxxx</p>
+<br>
+<br>
+<p>Console jelszó:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>line con 0</p>
+<p>password xxxxxxx</p>
+<p>login</p>
+<br>
+<br>
+<p>Banner:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>banner motd "xxxxxxx"</p>
+<br>
+<br>
+<p>Felhasználónév és jelszó:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>username xxxxxxx password/secret xxxxxxx</p>
+<p>(vagy password vagy secret)</p>
+<br>
+<br>
+<p>DHCP létrehozás forgalomirányítón:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>(Kizárás)ip dhcp excluded-address A.B.C.D(-tól) A.B.C.D(-ig)</p>
+<p>ip dhcp pool NÉV</p>
+<p>network A.B.C.D M.A.S.K</p>
+<p>default-router A.B.C.D</p>
+<p>dns-server A.B.C.D</p>
+<br>
+<br>
+<p>RIP forgalomirányítás:</p>
+<p>router config felületén RIP</p>
+<p>hálózatok amiket ismer az eszköz</p>
+<p>2-es verzió esetén CLI: v 2</p>
+<br>
+<br>
+<p>OSPF forgalomirányítás:</p>
+<p>enable</p>
+<p>conf t</p>
+<p>router ospf XX</p>
+<p>network A.B.C.D revM.A.S.K area XX</p>
+<p>(255.255.255.0 -> revMASK 0.0.0.255 ; 255.255.255.252 -> revMASK 0.0.0.3)</p>
+ <br>
   <footer>
     <table>
         <tr>
